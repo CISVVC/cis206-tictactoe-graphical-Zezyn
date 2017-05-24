@@ -5,9 +5,10 @@ public class Main {
 
     public static void main(String[] args) {
         GUI.Frame();
-        char[][] board = getEmptyBoard();
+        //GUI.createBoard();
+        /*char[][] board = getEmptyBoard();
         doTurn(board);
-        drawBoard(board);
+        drawBoard(board);*/
     }
 
     public static void drawColumns(char[] cols)
