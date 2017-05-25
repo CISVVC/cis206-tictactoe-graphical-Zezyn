@@ -1,16 +1,27 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import javax.swing.JFrame;
 
 public class Main {
 
     public static void main(String[] args) {
-        GUI.Frame();
-        //GUI.createBoard();
+
+        //Create Frame
+        JFrame frame = new TicTacToe();
+        frame.setTitle("Tic Tac Toe");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+
+        //Print out Frame
+        System.out.println(frame);
+
         /*char[][] board = getEmptyBoard();
         doTurn(board);
         drawBoard(board);*/
     }
 
+
+    /*
     public static void drawColumns(char[] cols)
     { System.out.println("| " + cols[0] +" | "+cols[1] + " | " + cols[2] + " |"); }
 
@@ -32,6 +43,7 @@ public class Main {
         };
         return board;
     }
+    */
 
     public static char changePlayer(char playerMark) {
         if (playerMark == 'X') {
@@ -46,7 +58,7 @@ public class Main {
     public static int playerLocation(char[][] board) {
         //Get user location
         Scanner in = new Scanner(System.in);
-        drawBoard(board);
+        //drawBoard(board);
         System.out.print("- Pick a spot: ");
         int spot = in.nextInt();
         return spot;
