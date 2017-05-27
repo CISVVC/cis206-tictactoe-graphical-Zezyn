@@ -1,19 +1,23 @@
+/*
+* A tic tac toe GUI game
+* Created by Martin Hernandez
+ */
+
 import java.util.Arrays;
 import java.util.Scanner;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Main {
 
     public static void main(String[] args) {
 
         //Create Frame
-        JFrame frame = new TicTacToe();
-        frame.setTitle("Tic Tac Toe");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+        Frame frame = new Frame();
+        //frame.setVisible(true);
+        //board.setVisible(true);
 
-        //Print out Frame
-        System.out.println(frame);
+        //frame.add(new Board());
 
         /*char[][] board = getEmptyBoard();
         doTurn(board);
