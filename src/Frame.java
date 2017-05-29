@@ -25,11 +25,10 @@ public class Frame extends JFrame {
         frame.setVisible(true);
 
         // Create board object
-
         Board board = new Board();
+        //Add Frame to board
         frame.getContentPane().add(board);
-
+        //Disable Resize
         this.setResizable(false);
-
     }
 }
