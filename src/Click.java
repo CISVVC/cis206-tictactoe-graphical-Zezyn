@@ -14,12 +14,18 @@ public class Click implements ActionListener {
 
     public void actionPerformed(ActionEvent e)
     {
+        /*
         if (label.equals("X") || label.equals(" ")) {
             label.setText("O");
-            System.out.println(label);
+            System.out.println("Making an O");
+
         } else {
             label.setText("Testing");
-            System.out.println("X");
-        }
+            System.out.println("Making an X");
+        }*/
+
+        //Game.changePlayer(Board.xORo);
+
+        label.setText("X");
     }
 }

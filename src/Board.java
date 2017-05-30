@@ -23,18 +23,18 @@ public class Board extends JPanel {
         this.setLayout(new GridLayout(3,3));
 
         //Create JLabels for buttons
-        JLabel button = new JLabel(xORo);
+        JLabel button = new JLabel();
 
         //A create the 9 buttons
-        JButton button1 = new JButton(xORo);
-        JButton button2 = new JButton(empty);
-        JButton button3 = new JButton(empty);
-        JButton button4 = new JButton(empty);
-        JButton button5 = new JButton(empty);
-        JButton button6 = new JButton(empty);
-        JButton button7 = new JButton(empty);
-        JButton button8 = new JButton(empty);
-        JButton button9 = new JButton(empty);
+        JButton button1 = new JButton();
+        JButton button2 = new JButton();
+        JButton button3 = new JButton();
+        JButton button4 = new JButton();
+        JButton button5 = new JButton();
+        JButton button6 = new JButton();
+        JButton button7 = new JButton();
+        JButton button8 = new JButton();
+        JButton button9 = new JButton();
 
         //Enable button
         button1.setEnabled(true);
@@ -63,6 +63,7 @@ public class Board extends JPanel {
         this.add(button9);
         this.setVisible(true);
     }
+
     public void ChangeLabel() {
 
     }

@@ -29,6 +29,6 @@ public class Frame extends JFrame {
         //Add Frame to board
         frame.getContentPane().add(board);
         //Disable Resize
-        this.setResizable(false);
+        //this.setResizable(false);
     }
 }
