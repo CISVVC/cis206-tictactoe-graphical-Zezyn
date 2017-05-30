@@ -23,7 +23,8 @@ public class Board extends JPanel {
         this.setLayout(new GridLayout(3,3));
 
         //Create JLabels for buttons
-        JLabel button = new JLabel();
+        //Use this for Header
+        //JLabel button = new JLabel();
 
         //A create the 9 buttons
         JButton button1 = new JButton();
