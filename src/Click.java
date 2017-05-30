@@ -1,16 +1,15 @@
 /**
  * Created by Martin on 5/29/2017.
  */
-import javax.swing.JLabel;
+import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class Click implements ActionListener {
 
-    JLabel label;
-    public Click(JLabel label) {
-        this.label = label;
-    }
+    JButton button;
+    Game game;
+    public Click(JButton label) { this.button = button; this.game = game; }
 
     public void actionPerformed(ActionEvent e)
     {
@@ -26,6 +25,8 @@ public class Click implements ActionListener {
 
         //Game.changePlayer(Board.xORo);
 
-        label.setText("X");
+        //label.setText("X");
+
+        this.button.setText("X");
     }
 }

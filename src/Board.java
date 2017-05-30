@@ -48,7 +48,7 @@ public class Board extends JPanel {
         button9.setEnabled(true);
 
         //Add Action Listeners
-        Click c1 = new Click(button);
+        Click c1 = new Click(button1);
         button1.addActionListener(c1);
 
         //Add button to panel
@@ -62,9 +62,5 @@ public class Board extends JPanel {
         this.add(button8);
         this.add(button9);
         this.setVisible(true);
-    }
-
-    public void ChangeLabel() {
-
     }
 }
