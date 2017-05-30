@@ -4,26 +4,17 @@ import java.util.Scanner;
  * Created by Martin on 5/29/2017.
  */
 public class Game {
-    public static char changePlayer(char playerMark) {
-        if (playerMark == 'X') {
-            playerMark = 'O';
-        }
-        else {
-            playerMark = 'X';
+    public static String changePlayer(String playerMark) {
+        if (playerMark == "X") {
+            playerMark = "O";
+        } else {
+            playerMark = "X";
         }
         return playerMark;
     }
-
-    public static int playerLocation(char[][] board) {
-        //Get user location
-        Scanner in = new Scanner(System.in);
-        //drawBoard(board);
-        System.out.print("- Pick a spot: ");
-        int spot = in.nextInt();
-        return spot;
-    }
-
-    public static void doTurn(char[][] board) {
+}
+    /*
+    public static void doTurn() {
 
         char player = 'X';
         int row = 0, col = 0;
@@ -46,7 +37,7 @@ public class Game {
             //Puts in player char in the proper locations
             int spot;
             System.out.print(" -- Player " + player + " \n ");
-            spot = playerLocation(board);
+            spot = 0;
             switch (spot) {
                 case 1:
                     row = 0;
@@ -152,3 +143,4 @@ public class Game {
         } else { return false; }
     }
 }
+*/
