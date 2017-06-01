@@ -4,12 +4,12 @@ import java.util.Scanner;
  * Created by Martin on 5/29/2017.
  */
 public class Game {
-    public static String changePlayer(String playerMark) {
-        if (playerMark == "X") {
-            playerMark = "O";
-        } else {
-            playerMark = "X";
-        }
+    static String playerMark;
+    static int player;
+
+    public static String changePlayer() {
+        if (player == 1 || player == 0) { playerMark = "O"; player = 2; }
+        else { playerMark = "X"; player = 1; }
         return playerMark;
     }
 }

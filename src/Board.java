@@ -9,15 +9,8 @@ import java.awt.event.ActionListener;
 
 public class Board extends JPanel {
 
-
-    public static String xORo = null;
-
     //Creates the 3x3 board
     public Board() {
-
-        String empty = null;
-        //String xORo = "O";
-        xORo = Game.changePlayer(xORo);
 
         //Creates the 3x3 grid for buttons in the panel
         this.setLayout(new GridLayout(3,3));
@@ -48,9 +41,29 @@ public class Board extends JPanel {
         button8.setEnabled(true);
         button9.setEnabled(true);
 
-        //Add Action Listeners
+        //Add Click to buttons
         Click c1 = new Click(button1);
+        Click c2 = new Click(button2);
+        Click c3 = new Click(button3);
+        Click c4 = new Click(button4);
+        Click c5 = new Click(button5);
+        Click c6 = new Click(button6);
+        Click c7 = new Click(button7);
+        Click c8 = new Click(button8);
+        Click c9 = new Click(button9);
+
+
+        //Add Action Listeners
         button1.addActionListener(c1);
+        button2.addActionListener(c2);
+        button3.addActionListener(c3);
+        button4.addActionListener(c4);
+        button5.addActionListener(c5);
+        button6.addActionListener(c6);
+        button7.addActionListener(c7);
+        button8.addActionListener(c8);
+        button9.addActionListener(c9);
+
 
         //Add button to panel
         this.add(button1);
