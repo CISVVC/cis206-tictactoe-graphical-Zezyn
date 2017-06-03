@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by Martin Hernandez on 5/25/2017.
@@ -25,7 +27,7 @@ public class Board extends JPanel {
     Click c1, c2, c3, c4, c5, c6, c7, c8, c9;
 
     //Create instance of game engine
-    Game game;
+    Game game = new Game(this);
 
     //Creates the 3x3 board
     public Board() {
@@ -57,13 +59,41 @@ public class Board extends JPanel {
 
     public void setPlayer(String player) {
         //Change JLabel text for Player
-                                        //Why doesn't this work?
-        //status.setText(player);
-
-        status.setText("Testing");
+        status.setText("Player: " + player);
     }
 
     public void createButtons() {
+
+        //New Game Button
+        JButton gameButton = new JButton("New Game");
+        game.newGame = gameButton;
+        playerStatus.add(gameButton);
+        gameButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                game.player = 1;
+                game.showPlayer();
+                B1.setEnabled(true);
+                B1.setText("1");
+                B2.setEnabled(true);
+                B2.setText("2");
+                B3.setEnabled(true);
+                B3.setText("3");
+                B4.setEnabled(true);
+                B4.setText("4");
+                B5.setEnabled(true);
+                B5.setText("5");
+                B6.setEnabled(true);
+                B6.setText("6");
+                B7.setEnabled(true);
+                B7.setText("7");
+                B8.setEnabled(true);
+                B8.setText("8");
+                B9.setEnabled(true);
+                B9.setText("9");
+            }
+        });
+
         //A create the 9 buttons
         B1 = new JButton("1");
         B2 = new JButton("2");
@@ -87,15 +117,15 @@ public class Board extends JPanel {
         B9.setEnabled(true);
 
         //Add Click to buttons
-        c1 = new Click(B1);
-        c2 = new Click(B2);
-        c3 = new Click(B3);
-        c4 = new Click(B4);
-        c5 = new Click(B5);
-        c6 = new Click(B6);
-        c7 = new Click(B7);
-        c8 = new Click(B8);
-        c9 = new Click(B9);
+        c1 = new Click(B1, game);
+        c2 = new Click(B2, game);
+        c3 = new Click(B3, game);
+        c4 = new Click(B4, game);
+        c5 = new Click(B5, game);
+        c6 = new Click(B6, game);
+        c7 = new Click(B7, game);
+        c8 = new Click(B8, game);
+        c9 = new Click(B9, game);
 
         //Add Action Listeners
         B1.addActionListener(c1);

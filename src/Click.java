@@ -11,7 +11,7 @@ public class Click implements ActionListener {
     JButton button;
     Game game;
 
-    public Click(JButton button) { this.button = button; this.game = game; }
+    public Click(JButton button, Game game) { this.button = button; this.game = game; }
 
     public void actionPerformed(ActionEvent e) {
 
