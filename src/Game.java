@@ -6,11 +6,16 @@ import java.util.Scanner;
 public class Game {
     static String playerMark;
     static int player;
+    static Board board = new Board();
 
     public static String changePlayer() {
         if (player == 1 || player == 0) { playerMark = "O"; player = 2; }
         else { playerMark = "X"; player = 1; }
         return playerMark;
+    }
+
+    public static void test() {
+        //System.out.print(board.button1.getText());
     }
 }
     /*

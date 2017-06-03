@@ -4,11 +4,8 @@
  */
 
 public class Main {
-
     public static void main(String[] args) {
-
         //Create Frame Object
         Frame frame = new Frame();
-
     }
 }

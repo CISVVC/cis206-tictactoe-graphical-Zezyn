@@ -18,7 +18,7 @@ public class Board extends JPanel {
         //Create JLabels for buttons
         //Use this for Header
         //JLabel button = new JLabel();
-
+/*
         //A create the 9 buttons
         JButton button1 = new JButton();
         JButton button2 = new JButton();
@@ -76,5 +76,72 @@ public class Board extends JPanel {
         this.add(button8);
         this.add(button9);
         this.setVisible(true);
+        */
+        createButtons();
+    }
+
+    public void createButtons() {
+        //A create the 9 buttons
+        JButton B1, B2, B3, B4, B5, B6, B7, B8, B9;
+        B1 = new JButton();
+        B2 = new JButton();
+        B3 = new JButton();
+        B4 = new JButton();
+        B5 = new JButton();
+        B6 = new JButton();
+        B7 = new JButton();
+        B8 = new JButton();
+        B9 = new JButton();
+
+        //Enable button
+        B1.setEnabled(true);
+        B2.setEnabled(true);
+        B3.setEnabled(true);
+        B4.setEnabled(true);
+        B5.setEnabled(true);
+        B6.setEnabled(true);
+        B7.setEnabled(true);
+        B8.setEnabled(true);
+        B9.setEnabled(true);
+
+        //Add Click to buttons
+        Click c1 = new Click(B1);
+        Click c2 = new Click(B2);
+        Click c3 = new Click(B3);
+        Click c4 = new Click(B4);
+        Click c5 = new Click(B5);
+        Click c6 = new Click(B6);
+        Click c7 = new Click(B7);
+        Click c8 = new Click(B8);
+        Click c9 = new Click(B9);
+
+
+        //Add Action Listeners
+        B1.addActionListener(c1);
+        B2.addActionListener(c2);
+        B3.addActionListener(c3);
+        B4.addActionListener(c4);
+        B5.addActionListener(c5);
+        B6.addActionListener(c6);
+        B7.addActionListener(c7);
+        B8.addActionListener(c8);
+        B9.addActionListener(c9);
+
+
+        //Add B to panel
+        this.add(B1);
+        this.add(B2);
+        this.add(B3);
+        this.add(B4);
+        this.add(B5);
+        this.add(B6);
+        this.add(B7);
+        this.add(B8);
+        this.add(B9);
+        this.setVisible(true);
+    }
+
+    public void test() {
+        //System.out.print(B1.getText());
     }
 }

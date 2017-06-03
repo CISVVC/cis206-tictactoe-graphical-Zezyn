@@ -13,6 +13,8 @@ public class Click implements ActionListener {
     public Click(JButton button) { this.button = button; this.game = game; }
 
     public void actionPerformed(ActionEvent e) {
+
         this.button.setText(Game.changePlayer());
-    }
+        button.setEnabled(false);
+        }
 }
