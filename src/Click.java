@@ -26,7 +26,6 @@ public class Click implements ActionListener {
         this.button.setEnabled(false);
 
         //An attempt to check for a winner
-        game.checkWinner();
-
+        game.checkWinner((e.getActionCommand()));
     }
 }

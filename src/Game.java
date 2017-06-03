@@ -7,6 +7,8 @@ public class Game {
     static String playerMark;
     static int player;
     static Board board;
+    static String[] winnerCheck = new String[9];
+
 
     public static String changePlayer() {
         if (player == 1 || player == 0) { playerMark = "O"; player = 2; }
@@ -14,17 +16,10 @@ public class Game {
         return playerMark;
     }
 
-    public static void checkWinner() {
+    public static void checkWinner(Object d) {
 
-        System.out.print("Check WInner: " + board.B1.getText());
-        System.out.print("Check WInner: " + board.B2.getText());
-        System.out.print("Check WInner: " + board.B3.getText());
-        System.out.print("Check WInner: " + board.B4.getText());
-        System.out.print("Check WInner: " + board.B5.getText());
-        System.out.print("Check WInner: " + board.B6.getText());
-        System.out.print("Check WInner: " + board.B7.getText());
-        System.out.print("Check WInner: " + board.B8.getText());
-        System.out.print("Check WInner: " + board.B9.getText());
+        winnerCheck[0] = d.toString();
+        System.out.println(winnerCheck[0]);
 
     }
 }

@@ -11,6 +11,9 @@ public class Board extends JPanel {
     //Global buttons
     JButton B1, B2, B3, B4, B5, B6, B7, B8, B9;
 
+    Click c1, c2, c3, c4, c5, c6, c7, c8, c9;
+
+
     //Creates the 3x3 board
     public Board() {
 
@@ -47,7 +50,6 @@ public class Board extends JPanel {
         B9.setEnabled(true);
 
         //Add Click to buttons
-        Click c1, c2, c3, c4, c5, c6, c7, c8, c9;
         c1 = new Click(B1);
         c2 = new Click(B2);
         c3 = new Click(B3);
