@@ -16,7 +16,7 @@ public class Click implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         //Changes the player from x to o and vice versa
-        this.button.setText(Game.changePlayer());
+        this.button.setText(game.changePlayer());
 
         //Displays the player char in console
         System.out.println(this.button.getText() + " ");
@@ -26,6 +26,5 @@ public class Click implements ActionListener {
 
         //An attempt to check for a winner
         game.checkWinner((e.getActionCommand()));
-        //game.showPlayer();
     }
 }

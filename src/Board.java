@@ -12,8 +12,11 @@ public class Board extends JPanel {
     //JPanel for board
     JPanel board = new JPanel();
 
-    //JLabel for Game Status
+    //JPanel for Game Status
     JPanel playerStatus = new JPanel();
+
+    //JLabel for Game Status
+    JLabel status = new JLabel();
 
     //Global buttons
     JButton B1, B2, B3, B4, B5, B6, B7, B8, B9;
@@ -27,22 +30,37 @@ public class Board extends JPanel {
     //Creates the 3x3 board
     public Board() {
 
+        //Creates layout for main window
+        this.setLayout(new BorderLayout(10,10));
 
-        JLabel status = new JLabel("Player 1");
-        playerStatus.add(status, BorderLayout.CENTER);
-        this.add(playerStatus);
-
-        //Creates the 2 Rows for main window
-        GridLayout main = new GridLayout(2,1);
         //Creates the 3x3 grid for buttons in the panel
         GridLayout grid = new GridLayout(3,3);
 
-        //Creates layout for main window and board
-        this.setLayout(main);
+        //Creates layout for board
         board.setLayout(grid);
 
         //Calls the method to create the buttons
         createButtons();
+
+        //Calls method to create status JLabel
+        createStatus();
+    }
+
+    public void createStatus() {
+        //Creates initial Label with Player 1
+        status.setText("Player 1");
+        //Adds to playerstatus Jpanel
+        playerStatus.add(status, BorderLayout.CENTER);
+        //adds to main JPanel
+        this.add(playerStatus, BorderLayout.NORTH);
+    }
+
+    public void setPlayer(String player) {
+        //Change JLabel text for Player
+                                        //Why doesn't this work?
+        //status.setText(player);
+
+        status.setText("Testing");
     }
 
     public void createButtons() {
