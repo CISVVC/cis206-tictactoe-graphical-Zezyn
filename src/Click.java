@@ -26,5 +26,6 @@ public class Click implements ActionListener {
 
         //An attempt to check for a winner
         game.checkWinner((e.getActionCommand()));
+        //game.showPlayer();
     }
 }

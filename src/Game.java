@@ -3,11 +3,13 @@
  * This is the game engine for TIC TAC TOE
  */
 
+import javax.swing.JLabel;
+
 public class Game {
 
     //Global Variables
     static String playerMark; //Used to keep track of players x or o
-    static int player; //Used to keep track of player 1 or 2
+    static int player = 0; //Used to keep track of player 1 or 2
     static String[] winnerCheck = new String[10]; //Used to keep track of button number
     static int count = 1; //Used to keep count in winnerCheck
 
@@ -17,6 +19,11 @@ public class Game {
         if (player == 1 || player == 0) { playerMark = "O"; player = 2; }
         else { playerMark = "X"; player = 1; }
         return playerMark;
+    }
+
+    public void showPlayer() {
+        //JLabel player = new JLabel(String.valueOf(this.player));
+        System.out.println(player);
     }
 
     public static void checkWinner(Object d) {

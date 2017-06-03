@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.BorderLayout;
 import java.awt.*;
 
 /**
@@ -8,22 +9,39 @@ import java.awt.*;
 
 public class Board extends JPanel {
 
+    //JPanel for board
+    JPanel board = new JPanel();
+
+    //JLabel for Game Status
+    JPanel playerStatus = new JPanel();
+
     //Global buttons
     JButton B1, B2, B3, B4, B5, B6, B7, B8, B9;
 
     //Create instances of Click
     Click c1, c2, c3, c4, c5, c6, c7, c8, c9;
 
+    //Create instance of game engine
+    Game game;
 
     //Creates the 3x3 board
     public Board() {
 
+
+        JLabel status = new JLabel("Player 1");
+        playerStatus.add(status, BorderLayout.CENTER);
+        this.add(playerStatus);
+
+        //Creates the 2 Rows for main window
+        GridLayout main = new GridLayout(2,1);
         //Creates the 3x3 grid for buttons in the panel
-        this.setLayout(new GridLayout(3,3));
+        GridLayout grid = new GridLayout(3,3);
 
-        //JLabel for Game Status
-        //JLabel status = new JLabel();
+        //Creates layout for main window and board
+        this.setLayout(main);
+        board.setLayout(grid);
 
+        //Calls the method to create the buttons
         createButtons();
     }
 
@@ -73,15 +91,18 @@ public class Board extends JPanel {
         B9.addActionListener(c9);
 
         //Add B to panel
-        this.add(B1);
-        this.add(B2);
-        this.add(B3);
-        this.add(B4);
-        this.add(B5);
-        this.add(B6);
-        this.add(B7);
-        this.add(B8);
-        this.add(B9);
+        board.add(B1);
+        board.add(B2);
+        board.add(B3);
+        board.add(B4);
+        board.add(B5);
+        board.add(B6);
+        board.add(B7);
+        board.add(B8);
+        board.add(B9);
+
+        //Adds board to main panel and makes visible
+        this.add(board);
         this.setVisible(true);
     }
 }
