@@ -9,7 +9,6 @@ import java.awt.event.ActionEvent;
 public class Click implements ActionListener {
 
     JButton button;
-    Board board;
     Game game;
 
     public Click(JButton button) { this.button = button; this.game = game; }

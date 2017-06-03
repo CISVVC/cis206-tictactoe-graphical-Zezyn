@@ -7,7 +7,8 @@ public class Game {
     static String playerMark;
     static int player;
     static Board board;
-    static String[] winnerCheck = new String[9];
+    static String[] winnerCheck = new String[10];
+    static int count = 1;
 
 
     public static String changePlayer() {
@@ -18,9 +19,13 @@ public class Game {
 
     public static void checkWinner(Object d) {
 
-        winnerCheck[0] = d.toString();
-        System.out.println(winnerCheck[0]);
+        count = Integer.parseInt(d.toString());
 
+        winnerCheck[count] = d.toString();
+
+        for(String myValue : winnerCheck) {
+            System.out.println(winnerCheck[count] + " " + count + " " + myValue);
+        }
     }
 }
     /*

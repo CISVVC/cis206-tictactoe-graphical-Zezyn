@@ -11,6 +11,7 @@ public class Board extends JPanel {
     //Global buttons
     JButton B1, B2, B3, B4, B5, B6, B7, B8, B9;
 
+    //Create instances of Click
     Click c1, c2, c3, c4, c5, c6, c7, c8, c9;
 
 
@@ -59,7 +60,6 @@ public class Board extends JPanel {
         c7 = new Click(B7);
         c8 = new Click(B8);
         c9 = new Click(B9);
-
 
         //Add Action Listeners
         B1.addActionListener(c1);
